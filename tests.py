@@ -48,17 +48,17 @@ def test_get_books_by_genre(books_collector):
     assert len(genre_books) == 3
 
 # Тест проверки отсутствия книг с возрастным рейтингом в списке книг для детей
-def get_children_books(books_collector):
+def test_get_children_books(books_collector):
     books_collector.add_new_book("Книга 1")
-    books_collector.get_book_genre("Книга 1", "Детективы")
+    books_collector.set_book_genre("Книга 1", "Детективы")
     books_collector.add_new_book("Книга 2")
-    books_collector.get_book_genre("Книга 2", "Ужасы")
+    books_collector.set_book_genre("Книга 2", "Ужасы")
     books_collector.add_new_book("Книга 3")
-    books_collector.get_book_genre("Книга 3", "Фантастика")
+    books_collector.set_book_genre("Книга 3", "Фантастика")
     books_collector.add_new_book("Книга 4")
-    books_collector.get_book_genre("Книга 4", "Комедии")
+    books_collector.set_book_genre("Книга 4", "Комедии")
     books_collector.add_new_book("Книга 5")
-    books_collector.get_book_genre("Книга 5", "Мультфильмы")
+    books_collector.set_book_genre("Книга 5", "Мультфильмы")
 
     children_books = books_collector.get_books_for_children()
 
